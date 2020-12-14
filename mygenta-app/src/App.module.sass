@@ -1,0 +1,22 @@
+@import "Assets/Fonts/stylesheet.css"
+@import "Assets/Sass/normalize.css"
+@import "Assets/Sass/vars"
+
+*, :before, :after
+  box-sizing: border-box
+
+body
+  font-family: SF Pro Display, sans-serif
+  font-size: 16px
+  line-height: 1.6
+  color: $text
+  overflow-x: hidden
+  min-width: 320px
+
+
+.container
+  max-width: 1200px
+  margin: auto
+  padding: 4.375rem 1rem
+  +media-breakpoint-up(sm)
+    padding: 7.500rem 1rem
