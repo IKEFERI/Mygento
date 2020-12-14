@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {Field} from "formik";
 import {odd_input} from "./Input.module.sass";
 const RadioButtons = (props) => {
