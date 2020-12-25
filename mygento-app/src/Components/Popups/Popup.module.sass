@@ -1,0 +1,111 @@
+@import "src/Assets/Sass/vars"
+.overlay
+  display: block
+  position: fixed
+  bottom: 0
+  top: 0
+  right: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.4)
+  z-index: 9998
+  cursor: pointer
+
+.popup_container
+  display: block
+  position: fixed
+  max-width: 600px
+  width: 100%
+  min-height: 200px
+  z-index: 9999
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: #fff
+  padding: 1rem
+
+.active
+  display: block
+  animation-name: fadein
+  animation-duration: 0.25s
+  animation-iteration-count: 1
+  animation-direction: normal
+  animation-timing-function: ease-out
+  animation-fill-mode: forwards
+  animation-delay: 0s
+
+
+.hidden
+  display: none
+
+
+.hiding
+  animation-name: fadeout
+  animation-duration: 0.25s
+  animation-iteration-count: 1
+  animation-direction: normal
+  animation-timing-function: ease-out
+  animation-fill-mode: forwards
+  animation-delay: 0s
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+.h2
+  margin-top: 1.5rem
+  text-align: center
+  font-size: 1.500rem
+
+.text
+  margin-bottom: 2rem
+  +media-breakpoint-up(sm)
+    padding: 0 1rem
+
+.cross
+  display: block
+  color: #2F80ED
+  font-size: 1.5rem
+  font-weight: bold
+  position: absolute
+  top: 0.4rem
+  right: 0.8rem
+  cursor: pointer
+
+
+.button
+  display: block
+  width: 100%
+  max-width: 360px
+  padding: 10px
+  margin: auto
+  text-align: center
+  font-size: 1rem
+  background-color: #1890FF
+  border: none
+  border-radius: 4px
+  color: #fff
+  cursor: pointer
+  +mt(0.25s)
+  &:hover
+    background-color: lighten(#1890FF, 10%)
+
+.text
+  max-height: 400px
+  overflow-x: hidden
+  overflow-y: auto
+  font-size: 1.250em
+  margin-bottom: 2.500em
+
+.done
+  text-align: center
+
+

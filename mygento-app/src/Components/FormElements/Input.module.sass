@@ -1,0 +1,162 @@
+@import "src/Assets/Sass/vars"
+
+::placeholder
+  color: #BFBFBF
+
+input:not([type="radio"]), textarea
+  border-radius: $border_radius
+  +mt(.25s)
+
+  &:focus, &:hover
+    box-shadow: $bs_hover
+
+
+label
+  font-size: 0.875rem
+
+
+.simple_input
+  margin-bottom: 1.500rem
+  flex: 0 0 100%
+  width: 100%
+  min-width: 280px
+
+  label
+    display: block
+    margin-bottom: 2px
+
+  input
+    display: block
+    border: 1px solid $border_color
+    outline: none
+    width: 100%
+    padding: 8px 12px
+    margin-bottom: 2px
+    +mt(0.25s)
+
+    &.invalid
+      border-color: $accent
+
+  +media-breakpoint-up(md)
+    flex: 0 0 50%
+    max-width: 360px
+    margin-bottom: 3rem
+    padding-right: 2.5rem
+    &:nth-of-type(2n+2)
+      padding-left: 2.5rem
+      padding-right: 0
+
+.odd_input
+  flex: 0 0 100%
+  margin-bottom: 1.5rem
+  display: flex
+  align-items: center
+  position: relative
+
+  input
+    width: 1rem
+    height: 1rem
+    cursor: pointer
+
+  label
+    margin-left: 0.5rem
+    margin-right: 2rem
+    cursor: pointer
+
+  .err
+    top: 100%
+
+  +media-breakpoint-up(sm)
+    margin-bottom: 3rem
+
+.err
+  display: inline-block
+  position: absolute
+  color: $accent
+  font-size: 0.875rem
+  font-weight: normal
+
+legend
+  .err
+    margin-left: 1rem
+
+.dropzone
+  display: flex
+  position: relative
+  align-items: center
+  justify-content: center
+  background: #F5F5F5
+  border: 1px dashed #D9D9D9
+  padding: 8px 30px
+  margin:
+    top: 22px
+    bottom: 2px
+  font-size: 0.875rem
+  cursor: pointer
+  +mt(0.25s)
+  &:hover, &:focus
+    border-color: darken($hover_color, 10%)
+
+
+.full
+  background-color: #f1f1f1
+  border: 1px solid #f1f1f1
+  width: 100%
+  .filename
+    white-space: nowrap
+    text-overflow: ellipsis
+    width: 100%
+    max-width: 200px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: left
+    color: #1890FF
+    svg
+      position: absolute
+      left: 0.8rem
+    +media-breakpoint-up(sm)
+      max-width: 100%
+  &:hover
+    background-color: #E6F7FF
+    border: 1px solid #E6F7FF
+    .cross
+      opacity: 1
+  .cross
+    opacity: 1
+    transform: none
+    left: auto
+    right: 10px
+    +media-breakpoint-up(sm)
+      opacity: 0
+
+.cross
+  display: inline-block
+  transform: rotate(45deg)
+  position: absolute
+  left: 10px
+  color: #8C8C8C
+  font-size: 1rem
+  font-weight: bold
+  +mt(0.25s)
+
+
+.button
+  display: block
+  width: 100%
+  max-width: 540px
+  padding: 8px
+  line-height: 1.500rem
+  text-align: center
+  border: 1px solid #D9D9D9
+  border-radius: 4px
+  font-size: 1rem
+  +mt(0.25s)
+  &:not([disabled])
+    background-color: #1890FF
+    border-color: #1890FF
+    color: #fff
+    cursor: pointer
+    &:hover
+      background-color: lighten(#1890FF, 10%)
+    
